@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './modules/user/user.component';
+import { OperatingSystems } from './interfaces/operating-systems';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   title = 'frontend';
   city : string = 'San Francisco'
   doesUserexist : boolean = true;
-  operatingystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'MacOS'}, {id: 3, name: 'Linux'}];
+  operatingystems: OperatingSystems[] = [{id: 1, name: 'Windows'}, {id: 2, name: 'MacOS'}, {id: 3, name: 'Linux'}];
   names = ['John', 'Jane', 'Jack', 'Jill'];
   occupation : string = 'Software Engineer';
   message = '';
