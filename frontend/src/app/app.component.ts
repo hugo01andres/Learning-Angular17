@@ -16,7 +16,7 @@ export class AppComponent {
   doesUserexist : boolean = true;
   operatingystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'MacOS'}, {id: 3, name: 'Linux'}];
   names = ['John', 'Jane', 'Jack', 'Jill'];
-
+  occupation : string = 'Software Engineer';
   message = '';
 
   onMouseOver() {

@@ -1,5 +1,6 @@
+
 <section>
-    @if (doesUserexist) {<app-user />} @else {
+    @if (doesUserexist) {<app-user [occupation]="occupation" />} @else {
         <p>user does not exist</p>
         }
         
