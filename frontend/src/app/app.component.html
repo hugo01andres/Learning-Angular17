@@ -1,4 +1,6 @@
 <p>Universe</p>
 <p>The city = {{city}}</p>
-<app-user/>
+@if (doesUserexist) {<app-user/>}
+@else {<p>user does not exist</p>}
+
 <router-outlet></router-outlet>

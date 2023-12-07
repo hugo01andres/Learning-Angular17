@@ -13,4 +13,5 @@ import { UserComponent } from './modules/user/user.component';
 export class AppComponent {
   title = 'frontend';
   city : string = 'San Francisco'
+  doesUserexist : boolean = true;
 }
