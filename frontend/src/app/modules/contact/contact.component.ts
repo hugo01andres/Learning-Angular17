@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,8 +10,16 @@ import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 })
 export class ContactComponent {
   favouriteFramework: string = '';
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
 
   sendForm() {
     console.log('Form sent!', this.favouriteFramework);
+  }
+  sendForm2() {
+    console.log('Form sent!', this.profileForm.value);
+    
   }
 }

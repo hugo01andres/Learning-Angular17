@@ -10,5 +10,14 @@
 </section>
 <section>
     <h1>Reactive Forms</h1>
+    <form [formGroup]="profileForm" (ngSubmit)="sendForm2()">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" formControlName="firstName">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" formControlName="lastName">
+        <button type="submit">Send info</button>
+    </form>
+    <p>Name: {{profileForm.value.firstName}}</p>
+    <p>Last Name: {{profileForm.value.lastName}}</p>
 </section>
 
