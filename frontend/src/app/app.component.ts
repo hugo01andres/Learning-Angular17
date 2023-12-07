@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { UserComponent } from './modules/user/user.component';
 import { OperatingSystems } from './interfaces/operating-systems';
 import { CommentsComponent } from './modules/comments/comments.component';
@@ -8,7 +8,7 @@ import { CommentsComponent } from './modules/comments/comments.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, UserComponent, CommentsComponent],
+  imports: [CommonModule, RouterOutlet, RouterLink,UserComponent, CommentsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

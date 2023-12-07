@@ -1,66 +1,32 @@
-
+<nav>
+  <ul>
+    <li><a [routerLink]="['/blog-post']" routerLinkActive="router-link-active" >Blog</a></li>
+    <li><a [routerLink]="['prueba']">Prueba</a></li>
+  </ul>
+</nav>
 <section>
-    @if (doesUserexist) {<app-user (occupationChange)="receiveEmission($event)" [occupation]="occupation" />} @else {
-        <p>user does not exist</p>
-        }
-        
-        <h2>Operating systems</h2>
-        @for (item of operatingystems; track item.id) {
-        <ul>
-          <li (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()"> {{message}} {{ item.name }}</li>
-        </ul>
-        }
-        
-        <h2>Names</h2>
-        @for (item of names; track $index) {
-        <ul>
-          <li>{{ item }}</li>
-        </ul>
-        }
+  @if (doesUserexist) {<app-user (occupationChange)="receiveEmission($event)" [occupation]="occupation" />} @else {
+      <p>user does not exist</p>
+      }
+      
+      <h2>Operating systems</h2>
+      @for (item of operatingystems; track item.id) {
+      <ul>
+        <li (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()"> {{message}} {{ item.name }}</li>
+      </ul>
+      }
+      
+      <h2>Names</h2>
+      @for (item of names; track $index) {
+      <ul>
+        <li>{{ item }}</li>
+      </ul>
+      }
 </section>
 <section>
-    <div style="border: 1px solid black;" [contentEditable]="isEditable">
+  <div style="border: 1px solid black;" [contentEditable]="isEditable">
 
-    </div>
-</section>
-<section>
-  <h1>Blog posts</h1>
-  <article>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore atque facere ducimus inventore aperiam veritatis neque ab odit, quo maiores accusamus aliquam aut suscipit, praesentium molestiae, explicabo sint sunt quod.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ad nostrum possimus maxime, dolorem provident laboriosam libero vel amet magnam quo quis corrupti nobis reprehenderit minus tempora voluptatibus explicabo! Voluptas.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non suscipit quisquam necessitatibus ab at sapiente eius consectetur ipsam placeat natus! Vel magnam commodi impedit sit. Obcaecati dolore praesentium dicta impedit?</p>
-  </article>
-  <h1>Comments</h1>
-  @defer (on viewport) {
-    <app-comments></app-comments>
-  }@placeholder {
-  <p>Future comments ...</p>
-  }@loading(minimum 2s){
-  <p>Loading comments...</p>
-  }@error {
-  <p>Something went wrong!</p>
-  }
+  </div>
 </section>
 
 
