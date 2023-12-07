@@ -1,6 +1,30 @@
-<p>Universe</p>
-<p>The city = {{city}}</p>
-@if (doesUserexist) {<app-user/>}
-@else {<p>user does not exist</p>}
+<section>
+    @if (doesUserexist) {<app-user />} @else {
+        <p>user does not exist</p>
+        }
+        
+        <h2>Operating systems</h2>
+        @for (item of operatingystems; track item.id) {
+        <ul>
+          <li>{{ item.name }}</li>
+        </ul>
+        }
+        
+        <h2>Names</h2>
+        @for (item of names; track $index) {
+        <ul>
+          <li>{{ item }}</li>
+        </ul>
+        }
+</section>
+<section>
+    <div style="border: 1px solid black;" [contentEditable]="isEditable">
+
+    </div>
+</section>
+
+
+
+
 
 <router-outlet></router-outlet>

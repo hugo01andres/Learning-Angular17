@@ -14,4 +14,8 @@ export class AppComponent {
   title = 'frontend';
   city : string = 'San Francisco'
   doesUserexist : boolean = true;
+  operatingystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'MacOS'}, {id: 3, name: 'Linux'}];
+  names = ['John', 'Jane', 'Jack', 'Jill'];
+
+  isEditable : boolean = true;
 }
