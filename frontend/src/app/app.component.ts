@@ -17,5 +17,14 @@ export class AppComponent {
   operatingystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'MacOS'}, {id: 3, name: 'Linux'}];
   names = ['John', 'Jane', 'Jack', 'Jill'];
 
+  message = '';
+
+  onMouseOver() {
+    this.message = 'Hello: ';
+  }
+  onMouseLeave(){
+    this.message = '';
+  }
+
   isEditable : boolean = true;
 }
