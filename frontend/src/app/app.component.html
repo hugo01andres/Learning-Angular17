@@ -1,6 +1,6 @@
 
 <section>
-    @if (doesUserexist) {<app-user [occupation]="occupation" />} @else {
+    @if (doesUserexist) {<app-user (occupationChange)="receiveEmission($event)" [occupation]="occupation" />} @else {
         <p>user does not exist</p>
         }
         

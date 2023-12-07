@@ -18,7 +18,7 @@ export class UserComponent {
   }
 
   emitToParent() {
-    this.occupationChange.emit(this.occupation = 'Abogado');
+    this.occupationChange.emit('Abogado');
   }
 
 }

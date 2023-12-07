@@ -25,6 +25,9 @@ export class AppComponent {
   onMouseLeave(){
     this.message = '';
   }
+  receiveEmission($event : any) {
+    this.occupation ='Y ahora soy' + $event;
+  }
 
   isEditable : boolean = true;
 }
