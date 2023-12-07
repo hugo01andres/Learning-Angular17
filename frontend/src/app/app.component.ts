@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './modules/user/user.component';
 import { OperatingSystems } from './interfaces/operating-systems';
+import { CommentsComponent } from './modules/comments/comments.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, UserComponent],
+  imports: [CommonModule, RouterOutlet, UserComponent, CommentsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
